@@ -1,0 +1,21 @@
+class IncomeTax
+{
+	public static void main(String arg[])
+	{
+	double incomeTax=0,incT;
+	incT=Double.parseDouble(arg[0]); 
+	System.out.println("Annual Income is : "+incT);
+    double incomeTax;
+    if(incT<=30000)
+		incomeTax=0;
+	else if(incT<=60000)
+		incomeTax=0.1*(incT-30000);
+	else if(incT<=100000)
+		incomeTax=(0.2*(incT-60000))+(0.1*10000);
+	else if(incT<=250000)
+		incomeTax=(0.3*(incT-100000))+(0.2*30000)+(0.1*10000);
+	else
+		incomeTax=(0.4*(incT-250000))+(0.3*100000)+(0.2*30000)+(0.1*10000);
+	System.out.println("Income tax amount is "+incomeTax);
+	}
+}
